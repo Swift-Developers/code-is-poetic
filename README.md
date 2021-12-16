@@ -1,6 +1,7 @@
 # code-is-poetic
 Swift 代码规范
 
+
 ## 一. 格式规范
 ### 1.1 使用4个空格进行缩进
 `推荐`
@@ -702,7 +703,9 @@ if let test = try aTryFuncton() {
 }
 ```
 
-### 3.6 数组和字典变量定义，定义时需要标明泛型类型，并使用更简洁的语法.
+### 3.6 数组和字典变量定义.
+
+定义时需要标明泛型类型，并使用更简洁的语法
 
 `推荐`
 ```swift
@@ -719,7 +722,9 @@ var lookup = [String: Int]()
 var lookup: Dictionary<String, Int> =Dictionary<String, Int>() // 不够简洁
 ```
 
-### 3.7 数组访问尽可能使用 .first 或 .last, 推荐使用 `for item in items` 或 `items.forEach { }` 而不是 `for i in 0...X`
+### 3.7 数组访问
+
+尽可能使用 .first 或 .last, 推荐使用 `for item in items` 或 `items.forEach { }` 而不是 `for i in 0...X`
 
 `推荐`
 ```swift
@@ -837,7 +842,9 @@ class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDel
 }
 ```
 
-### 3.12 当方法最后一个参数是Closure类型，调用时建议使用尾随闭包语法, 但只在只存在一个闭包参数时才使用尾闭包。
+### 3.12 尾随闭包
+
+当方法最后一个参数是Closure类型，调用时建议使用尾随闭包语法, 但只在只存在一个闭包参数时才使用尾闭包。
 
 `推荐`
 
@@ -953,6 +960,7 @@ func login(with username: String?, password: String?) throws -> LoginError {
 ```
 
 `不推荐`
+
 ```swift
 func test(_ number1: Int?, _ number2: Int?, _ number3: Int?) {
     if let number1 = number1 {
