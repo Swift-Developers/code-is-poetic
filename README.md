@@ -611,9 +611,8 @@ protocol Loggable {
 }
 
 protocol Equatable {
-    func ==(lhs: Self, rhs: Self) -> Bool {
-        /* ... */
-    }
+    func ==(lhs: Self, rhs: Self) -> Bool
+         /* ... */
 }
 ```
 
